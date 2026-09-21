@@ -1,0 +1,32 @@
+FinanSync 53 - correcao dos nove problemas auditados
+
+COMO ABRIR
+1. Extraia TODO o ZIP para uma pasta no seu computador.
+2. Execute 2_ABRIR_PROGRAMA.bat. O aplicativo de Windows ja esta incluido.
+3. Nao abra o executavel diretamente de dentro do ZIP.
+
+SE VOCE JA USA O PROGRAMA
+Antes de trocar de versao, exporte o backup JSON pelo aplicativo antigo.
+Feche a versao antiga. Extraia esta versao em outra pasta e importe o backup
+em Backup e restauracao > Importar backup JSON. Confira seus saldos.
+Nao apague a pasta antiga antes dessa conferencia.
+A base e os backups presentes no ZIP original foram preservados.
+Se voce fez novos lancamentos depois de enviar o ZIP, importe o backup
+mais recente para nao voltar a uma copia antiga.
+
+NOVIDADES
+Veja CORRECOES-V53.md para as mudancas e os limites dos testes.
+Para o uso normal, nao precisa gerar o programa novamente.
+Para executar os testes ou gerar outra distribuicao, instale Node.js.
+3_TESTAR_REGRAS.bat executa os testes. 1_GERAR_PROGRAMA.bat instala as
+ferramentas de desenvolvimento e gera outra distribuicao (requer internet).
+
+DADOS
+FinanSync_Dados, Backups e Exportacoes ficam ao lado do executavel.
+Use uma pasta em que seu usuario tenha permissao de escrita.
+
+VERSAO 52
+Leia GUIA-V52.md para entender renda, consumo, principal, custos e antecipacoes.
+O nome do executavel continua FinanSync V51.exe por compatibilidade, mas
+a tela identifica V53. O aplicativo e os modulos foram atualizados.
+Sua base e os backups foram preservados sem recalcular operacoes antigas.

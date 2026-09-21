@@ -1,0 +1,36 @@
+{
+  "name": "finansync-v51-controle-financeiro-completo",
+  "version": "53.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.js && node --check preload.cjs && node --check src/app.js && node --check src/finance-core.js && node --check src/data-validation.js",
+    "test:parsing": "node scripts/test_parsing.mjs",
+    "test:rules": "node scripts/test_rules.mjs",
+    "test:flows": "node scripts/test_flows.mjs",
+    "dist-unpacked": "electron-builder --dir --publish=never",
+    "test:regressions": "node scripts/test_regressions.mjs",
+    "test": "node scripts/test_parsing.mjs && node scripts/test_rules.mjs && node scripts/test_flows.mjs && node scripts/test_regressions.mjs && node scripts/test_monthly.mjs && node scripts/test_audit_fixes.mjs",
+    "test:monthly": "node scripts/test_monthly.mjs",
+    "test:audit": "node scripts/test_audit_fixes.mjs"
+  },
+  "devDependencies": {
+    "electron": "31.7.7",
+    "electron-builder": "24.13.3"
+  },
+  "build": {
+    "appId": "com.finansync.v51",
+    "productName": "FinanSync V51",
+    "directories": {
+      "output": "release"
+    },
+    "asar": false,
+    "win": {
+      "target": "dir",
+      "signAndEditExecutable": false
+    },
+    "npmRebuild": false,
+    "buildDependenciesFromSource": false
+  }
+}
